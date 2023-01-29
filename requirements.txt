@@ -1,0 +1,11 @@
+# ------------------------- IMPORTANT -------------------------------------
+#	Please make sure you have read and understand the instructions for this task.
+#	We will be working with the *spaCy* which is an EXTERNAL Python module.
+#	YOU MUST INSTALL IT BEFORE YOU CAN COMPLETE THIS TASK. 
+
+# ************************** INSTALLATION **************************************
+# Before doing anything, you need to have spaCy installed, as well as its English language model.
+
+# Type the following commands in command line
+# pip3 install spacy
+# python3 -m spacy download en
