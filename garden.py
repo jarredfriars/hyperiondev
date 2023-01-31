@@ -14,11 +14,11 @@ import spacy
 
 nlp = spacy.load('en_core_web_sm')
 
-garden_path_sentences = ("""I know the words to that song about the queen don’t rhyme. 
-She told me a little white lie will come back to haunt me. 
-The dog that I had really loved bones. 
+garden_path_sentences = ("""Helen is expecting tomorrow to be a bad day. 
+India gave the child the dog bit a Band-Aid. 
+When Fred eats food gets thrown. 
 That Jill is never here hurts.
-The man who whistles tunes piano.""")
+The man who marks walls out on weekends.""")
 
 doc = nlp(garden_path_sentences)
 
@@ -35,4 +35,6 @@ nlp_garden_path_sentences = nlp(garden_path_sentences)
 # This performs the entity recognition
 print([(i, i.label_, i.label) for i in nlp_garden_path_sentences.ents])
 
-# I didn't get any unusual entities when printing my sentences, only the number '380' after person
+# two unusual entities:
+# - a bad day = 'Date' is not an actual date
+# - india = 'GPE' when we would know it is a name and not a reference to a country
